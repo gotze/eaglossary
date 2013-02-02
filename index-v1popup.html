@@ -12,157 +12,149 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.0-beta.1/jquery.mobile-1.3.0-beta.1.min.js"></script>
+	<script src="phonegap.js"></script>
 	<body>
 <!-- Start of first page: #one -->
 <div data-role="page" id="one" data-theme="d">
-	<div data-role="header" data-position="fixed" data-theme="c">
-		<h1><img class="ui-btn-left" src="http://eafellows.com/wp-content/uploads/2012/01/eaf-transparent.gif" width="100" />  EA Glossary</h1>
-		<a href="#info" data-icon="info" class="ui-btn-right" data-theme="c">Info</a>
+	<div data-role="header" data-position="inline" data-theme="a">
+		<h1>EA Glossary</h1>
+		<a href="#info" data-icon="info" class="ui-btn-right" data-rel="dialog" data-transition="flow" data-theme="d">Info</a>
 	</div><!-- /header -->
 <div data-role="content" data-theme="d">
-<ul data-role="listview" data-filter="true" data-filter-placeholder="Lookup Enterprise Architecture terms" data-filter-theme="d" data-theme="d" data-divider-theme="a" data-autodividers="true">
-<!--  <ul data-role="listview" data-theme="d" data-filter="true" data-filter-placeholder="Type EA3, FEAF or 42010 to filter." data-inset="true"> -->
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Actionable"><a href="#Actionable" data-theme="d">Actionable</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Agency"><a href="#Agency" data-theme="d">Agency</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Alignment"><a href="#Alignment" data-theme="d">Alignment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Application Reference Model ARM"><a href="#ApplicationReferenceModel">Application Reference Model</a></li>
-<li data-filtertext="42010 Architecting"><a href="#Architecting">Architecting</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II 42010 Architecture"><a href="#Architecture">Architecture</a></li>
-<li data-filtertext="42010 Architecture description"><a href="#Architecturedescription">Architecture Description</a></li>
-<li data-filtertext="42010 Architecture framework"><a href="#Framework">Architecture Framework</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Architecture Segment"><a href="#architecturesegment">Architecture Segment</a></li>
-<li data-filtertext="42010 Architecture view"><a href="#architectureview">Architecture View</a></li>
-<li data-filtertext="42010 Architecture viewpoint"><a href="#architectureviewpoint">Architecture Viewpoint</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Artifact"><a href="#Artifact">Artifact</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Baseline Architecture"><a href="#BaselineArchitecture">Baseline Architecture</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Business Case"><a href="#BusinessCase">Business Case</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Business Reference Model BRM"><a href="#BusinessReferenceModel">Business Reference Model</a></li>
-<li data-filtertext="EA3 Capital Planning"><a href="#CapitalPlanning">Capital Planning</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Capital Planning and Investment Control CPIC"><a href="#cpic">Capital Planning and Investment Control</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Change Management"><a href="#ChangeManagement">Change Management</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II CIO Council chief information officer"><a href="#CIOCouncil">CIO Council</a></li>
-<li data-filtertext="EA3 Component"><a href="#Component">Component</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Composite"><a href="#Composite">Composite</a></li>
-<li data-filtertext="42010 Concern"><a href="#Concern">Concern</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Configuration Management"><a href="#ConfigurationManagement">Configuration Management</a></li>
-<li data-filtertext="EA3 Crosscutting Component"><a href="#CrosscuttingComponent">Crosscutting Component</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Crosscutting Segment"><a href="#CrosscuttingSegment">Crosscutting Segment</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Culture"><a href="#Culture">Culture</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Current View"><a href="#CurrentView">Current View</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Data"><a href="#Data">Data</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Data Reference Model DRM"><a href="#DataReferenceModel">Data Reference Model</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Electronic Government eGov"><a href="#ElectronicGovernment">Electronic Government</a></li>
-<li data-filtertext="EA3 Enterprise"><a href="#Enterprise">Enterprise</a></li>
-<li data-filtertext="EA3 Enterprise Architecture"><a href="#EnterpriseArchitecture">Enterprise Architecture</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Enterprise Roadmap"><a href="#EnterpriseRoadmap">Enterprise Roadmap</a></li>
-<li data-filtertext="42010 Environment"><a href="#Environment">Environment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Executive Agency"><a href="#ExecutiveAgency">Executive Agency</a></li>
-<li data-filtertext="EA3 Executive Sponsor"><a href="#ExecutiveSponsor">Executive Sponsor</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Federal Enterprise Architecture"><a href="#FederalEnterpriseArchitecture">Federal Enterprise Architecture</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Federal IT Dashboard"><a href="#FederalITDashboard">Federal IT Dashboard</a></li>
-<li data-filtertext="EA3 Framework"><a href="#Framework">Framework</a></li>
-<li data-filtertext="EA3 Future View"><a href="#FutureView">Future View</a></li>
-<li data-filtertext="EA3 Governance"><a href="#Governance">Governance</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Government Information"><a href="#GovernmentInformation">Government Information</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Government Publication"><a href="#GovernmentPublication">Government Publication</a></li>
-<li data-filtertext="EA3 Horizontal Component"><a href="#HorizontalComponent">Horizontal Component</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Horizontal Segment"><a href="#HorizontalSegment">Horizontal Segment</a></li>
-<li data-filtertext="EA3 Information"><a href="#Information">Information</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Life Cycle"><a href="#InformationLifeCycle">Information Life Cycle</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Management"><a href="#InformationManagement">Information Management</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Resources"><a href="#InformationResources">Information Resources</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Resources Management"><a href="#InformationResourcesManagement">Information Resources Management</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Resource Management Strategic Plan"><a href="#InformationResourceManagementStrategicPlan">Information Resource Management Strategic Plan</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Security"><a href="#InformationSecurity">Information Security</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information System"><a href="#InformationSystem">Information System</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information System Life Cycle"><a href="#InformationSystemLifeCycle">Information SystemLife Cycle</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Information Technology IT"><a href="#InformationTechnology">Information Technology</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Information Technology Investment"><a href="#InformationTechnologyInvestment">Information Technology Investment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Infrastructure Reference Model IRM"><a href="#InfrastructureReferenceModel">Infrastructure Reference Model</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Interoperability"><a href="#Interoperability">Interoperability</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Knowledge"><a href="#Knowledge">Knowledge</a></li>
-<li data-filtertext="EA3 Line of Business"><a href="#LineofBusiness">Line of Business</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Major Investment"><a href="#MajorInvestment">Major Investment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Managing Partner"><a href="#ManagingPartner">Managing Partner</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Meta Context"><a href="#MetaContext">Meta Context</a></li>
-<li data-filtertext="EA3 Methodology"><a href="#Methodology">Methodology</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Mission Statement"><a href="#MissionStatement">Mission Statement</a></li>
-<li data-filtertext="42010 Model kind"><a href="#Modelkind">Model Kind</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II New IT Investment"><a href="#NewITInvestment">New IT Investment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II National Security System"><a href="#NationalSecuritySystem">National Security System</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II NonMajor Investment"><a href="#NonMajorInvestment">Non-Major Investment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II On-Going Investment"><a href="#OnGoingInvestment">On-Going Investment</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Operations"><a href="#Operations">Operations</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Operations and Maintenance O&M"><a href="#OperationsandMaintenance">Operations and Maintenance</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Partner Agency"><a href="#PartnerAgency">Partner Agency</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Performance Gap"><a href="#PerformanceGap">Performance Gap</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Performance Reference Model"><a href="#PerformanceReferenceModel">Performance Reference Model</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Privacy Impact Assessment PIA"><a href="#PrivacyImpactAssessment">Privacy Impact Assessment</a></li>
-<li data-filtertext="EA3 Program"><a href="#Program">Program</a></li>
-<li data-filtertext="EA3 Project"><a href="#Project">Project</a></li>
-<li data-filtertext="EA3 Primitive"><a href="#Primitive">Primitive</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Quality Assurance"><a href="#QualityAssurance">Quality Assurance</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Records"><a href="#Records">Records</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Records Management"><a href="#RecordsManagement">Records Management</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Reference Architecture"><a href="#ReferenceArchitecture">Reference Architecture</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Security Reference Model"><a href="#SecurityReferenceModel">Security Reference Model</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Segment Architecture"><a href="#SegmentArchitecture">Segment Architecture</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Service Consumer"><a href="#ServiceConsumer">Service Consumer</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Service Oriented Architecture SOA"><a href="#ServiceOrientedArchitecture">Service Oriented Architecture</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Service Provider"><a href="#ServiceProvider">Service Provider</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Shared Service"><a href="#SharedService">Shared Service</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Solution Architecture"><a href="#SolutionArchitecture">Solution Architecture</a></li>
-<li data-filtertext="EA3 42010 FEAF2:8 FEAF-II Stakeholder"><a href="#Stakeholder">Stakeholder</a></li>
-<li data-filtertext="EA3 System"><a href="#System">System</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Systems Development Life Cycle SDLC"><a href="#SystemsDevelopmentLifeCycle">Systems Development Life Cycle</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Target Architecture"><a href="#TargetArchitecture">Target Architecture</a></li>
-<li data-filtertext="EA3 Vertical Component"><a href="#VerticalComponent">Vertical Component</a></li>
-<li data-filtertext="EA3 FEAF2:8 FEAF-II Vision Statement"><a href="#VisionStatement">Vision Statement</a></li>
-<li data-filtertext="FEAF2:8 FEAF-II Web-enabled"><a href="#Webenabled">Web-enabled</a></li>
+<h2>Enterprise Architecture Terms</h2>	
+<ul data-role="listview" data-theme="d" data-filter="true" data-filter-placeholder="Type EA3, FEAF or 42010 to filter." data-inset="true">
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Actionable" data-theme="d"><a href="#Actionable" data-rel="dialog" data-transition="flip" data-theme="d">Actionable</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Agency"><a href="#Agency" data-rel="dialog" data-transition="flip" data-theme="d">Agency</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Alignment"><a href="#Alignment" data-rel="dialog" data-transition="flip" data-theme="d">Alignment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Application Reference Model ARM"><a href="#ApplicationReferenceModel" data-rel="dialog" data-transition="flip">Application Reference Model</a></li>
+<li data-filtertext="42010 Architecting"><a href="#Architecting" data-rel="dialog" data-transition="flip">Architecting</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II 42010 Architecture"><a href="#Architecture" data-rel="dialog" data-transition="flip">Architecture</a></li>
+<li data-filtertext="42010 Architecture description"><a href="#Architecturedescription" data-rel="dialog" data-transition="flip">Architecture Description</a></li>
+<li data-filtertext="42010 Architecture framework"><a href="#Framework" data-rel="dialog" data-transition="flip">Architecture Framework</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Architecture Segment"><a href="#architecturesegment" data-rel="dialog" data-transition="flip">Architecture Segment</a></li>
+<li data-filtertext="42010 Architecture view"><a href="#architectureview" data-rel="dialog" data-transition="flip">Architecture View</a></li>
+<li data-filtertext="42010 Architecture viewpoint"><a href="#architectureviewpoint" data-rel="dialog" data-transition="flip">Architecture Viewpoint</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Artifact"><a href="#Artifact" data-rel="dialog" data-transition="flip">Artifact</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Baseline Architecture"><a href="#BaselineArchitecture" data-rel="dialog" data-transition="flip">Baseline Architecture</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Business Case"><a href="#BusinessCase" data-rel="dialog" data-transition="flip">Business Case</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Business Reference Model BRM"><a href="#BusinessReferenceModel" data-rel="dialog" data-transition="flip">Business Reference Model</a></li>
+<li data-filtertext="EA3 Capital Planning"><a href="#CapitalPlanning" data-rel="dialog" data-transition="flip">Capital Planning</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Capital Planning and Investment Control CPIC"><a href="#cpic" data-rel="dialog" data-transition="flip">Capital Planning and Investment Control</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Change Management"><a href="#ChangeManagement" data-rel="dialog" data-transition="flip">Change Management</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II CIO Council chief information officer"><a href="#CIOCouncil" data-rel="dialog" data-transition="flip">CIO Council</a></li>
+<li data-filtertext="EA3 Component"><a href="#Component" data-rel="dialog" data-transition="flip">Component</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Composite"><a href="#Composite" data-rel="dialog" data-transition="flip">Composite</a></li>
+<li data-filtertext="42010 Concern"><a href="#Concern" data-rel="dialog" data-transition="flip">Concern</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Configuration Management"><a href="#ConfigurationManagement" data-rel="dialog" data-transition="flip">Configuration Management</a></li>
+<li data-filtertext="EA3 Crosscutting Component"><a href="#CrosscuttingComponent" data-rel="dialog" data-transition="flip">Crosscutting Component</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Crosscutting Segment"><a href="#CrosscuttingSegment" data-rel="dialog" data-transition="flip">Crosscutting Segment</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Culture"><a href="#Culture" data-rel="dialog" data-transition="flip">Culture</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Current View"><a href="#CurrentView" data-rel="dialog" data-transition="flip">Current View</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Data"><a href="#Data" data-rel="dialog" data-transition="flip">Data</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Data Reference Model DRM"><a href="#DataReferenceModel" data-rel="dialog" data-transition="flip">Data Reference Model</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Electronic Government eGov"><a href="#ElectronicGovernment" data-rel="dialog" data-transition="flip">Electronic Government</a></li>
+<li data-filtertext="EA3 Enterprise"><a href="#Enterprise" data-rel="dialog" data-transition="flip">Enterprise</a></li>
+<li data-filtertext="EA3 Enterprise Architecture"><a href="#EnterpriseArchitecture" data-rel="dialog" data-transition="flip">Enterprise Architecture</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Enterprise Roadmap"><a href="#EnterpriseRoadmap" data-rel="dialog" data-transition="flip">Enterprise Roadmap</a></li>
+<li data-filtertext="42010 Environment"><a href="#Environment" data-rel="dialog" data-transition="flip">Environment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Executive Agency"><a href="#ExecutiveAgency" data-rel="dialog" data-transition="flip">Executive Agency</a></li>
+<li data-filtertext="EA3 Executive Sponsor"><a href="#ExecutiveSponsor" data-rel="dialog" data-transition="flip">Executive Sponsor</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Federal Enterprise Architecture"><a href="#FederalEnterpriseArchitecture" data-rel="dialog" data-transition="flip">Federal Enterprise Architecture</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Federal IT Dashboard"><a href="#FederalITDashboard" data-rel="dialog" data-transition="flip">Federal IT Dashboard</a></li>
+<li data-filtertext="EA3 Framework"><a href="#Framework" data-rel="dialog" data-transition="flip">Framework</a></li>
+<li data-filtertext="EA3 Future View"><a href="#FutureView" data-rel="dialog" data-transition="flip">Future View</a></li>
+<li data-filtertext="EA3 Governance"><a href="#Governance" data-rel="dialog" data-transition="flip">Governance</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Government Information"><a href="#GovernmentInformation" data-rel="dialog" data-transition="flip">Government Information</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Government Publication"><a href="#GovernmentPublication" data-rel="dialog" data-transition="flip">Government Publication</a></li>
+<li data-filtertext="EA3 Horizontal Component"><a href="#HorizontalComponent" data-rel="dialog" data-transition="flip">Horizontal Component</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Horizontal Segment"><a href="#HorizontalSegment" data-rel="dialog" data-transition="flip">Horizontal Segment</a></li>
+<li data-filtertext="EA3 Information"><a href="#Information" data-rel="dialog" data-transition="flip">Information</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Life Cycle"><a href="#InformationLifeCycle" data-rel="dialog" data-transition="flip">Information Life Cycle</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Management"><a href="#InformationManagement" data-rel="dialog" data-transition="flip">Information Management</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Resources"><a href="#InformationResources" data-rel="dialog" data-transition="flip">Information Resources</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Resources Management"><a href="#InformationResourcesManagement" data-rel="dialog" data-transition="flip">Information Resources Management</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Resource Management Strategic Plan"><a href="#InformationResourceManagementStrategicPlan" data-rel="dialog" data-transition="flip">Information Resource Management Strategic Plan</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Security"><a href="#InformationSecurity" data-rel="dialog" data-transition="flip">Information Security</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information System"><a href="#InformationSystem" data-rel="dialog" data-transition="flip">Information System</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information System Life Cycle"><a href="#InformationSystemLifeCycle" data-rel="dialog" data-transition="flip">Information SystemLife Cycle</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Information Technology IT"><a href="#InformationTechnology" data-rel="dialog" data-transition="flip">Information Technology</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Information Technology Investment"><a href="#InformationTechnologyInvestment" data-rel="dialog" data-transition="flip">Information Technology Investment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Infrastructure Reference Model IRM"><a href="#InfrastructureReferenceModel" data-rel="dialog" data-transition="flip">Infrastructure Reference Model</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Interoperability"><a href="#Interoperability" data-rel="dialog" data-transition="flip">Interoperability</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Knowledge"><a href="#Knowledge" data-rel="dialog" data-transition="flip">Knowledge</a></li>
+<li data-filtertext="EA3 Line of Business"><a href="#LineofBusiness" data-rel="dialog" data-transition="flip">Line of Business</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Major Investment"><a href="#MajorInvestment" data-rel="dialog" data-transition="flip">Major Investment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Managing Partner"><a href="#ManagingPartner" data-rel="dialog" data-transition="flip">Managing Partner</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Meta Context"><a href="#MetaContext" data-rel="dialog" data-transition="flip">Meta Context</a></li>
+<li data-filtertext="EA3 Methodology"><a href="#Methodology" data-rel="dialog" data-transition="flip">Methodology</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Mission Statement"><a href="#MissionStatement" data-rel="dialog" data-transition="flip">Mission Statement</a></li>
+<li data-filtertext="42010 Model kind"><a href="#Modelkind" data-rel="dialog" data-transition="flip">Model Kind</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II New IT Investment"><a href="#NewITInvestment" data-rel="dialog" data-transition="flip">New IT Investment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II National Security System"><a href="#NationalSecuritySystem" data-rel="dialog" data-transition="flip">National Security System</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II NonMajor Investment"><a href="#NonMajorInvestment" data-rel="dialog" data-transition="flip">Non-Major Investment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II On-Going Investment"><a href="#OnGoingInvestment" data-rel="dialog" data-transition="flip">On-Going Investment</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Operations"><a href="#Operations" data-rel="dialog" data-transition="flip">Operations</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Operations and Maintenance O&M"><a href="#OperationsandMaintenance" data-rel="dialog" data-transition="flip">Operations and Maintenance</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Partner Agency"><a href="#PartnerAgency" data-rel="dialog" data-transition="flip">Partner Agency</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Performance Gap"><a href="#PerformanceGap" data-rel="dialog" data-transition="flip">Performance Gap</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Performance Reference Model"><a href="#PerformanceReferenceModel" data-rel="dialog" data-transition="flip">Performance Reference Model</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Privacy Impact Assessment PIA"><a href="#PrivacyImpactAssessment" data-rel="dialog" data-transition="flip">Privacy Impact Assessment</a></li>
+<li data-filtertext="EA3 Program"><a href="#Program" data-rel="dialog" data-transition="flip">Program</a></li>
+<li data-filtertext="EA3 Project"><a href="#Project" data-rel="dialog" data-transition="flip">Project</a></li>
+<li data-filtertext="EA3 Primitive"><a href="#Primitive" data-rel="dialog" data-transition="flip">Primitive</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Quality Assurance"><a href="#QualityAssurance" data-rel="dialog" data-transition="flip">Quality Assurance</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Records"><a href="#Records" data-rel="dialog" data-transition="flip">Records</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Records Management"><a href="#RecordsManagement" data-rel="dialog" data-transition="flip">Records Management</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Reference Architecture"><a href="#ReferenceArchitecture" data-rel="dialog" data-transition="flip">Reference Architecture</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Security Reference Model"><a href="#SecurityReferenceModel" data-rel="dialog" data-transition="flip">Security Reference Model</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Segment Architecture"><a href="#SegmentArchitecture" data-rel="dialog" data-transition="flip">Segment Architecture</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Service Consumer"><a href="#ServiceConsumer" data-rel="dialog" data-transition="flip">Service Consumer</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Service Oriented Architecture SOA"><a href="#ServiceOrientedArchitecture" data-rel="dialog" data-transition="flip">Service Oriented Architecture</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Service Provider"><a href="#ServiceProvider" data-rel="dialog" data-transition="flip">Service Provider</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Shared Service"><a href="#SharedService" data-rel="dialog" data-transition="flip">Shared Service</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Solution Architecture"><a href="#SolutionArchitecture" data-rel="dialog" data-transition="flip">Solution Architecture</a></li>
+<li data-filtertext="EA3 42010 FEAF2:8 FEAF-II Stakeholder"><a href="#Stakeholder" data-rel="dialog" data-transition="flip">Stakeholder</a></li>
+<li data-filtertext="EA3 System"><a href="#System" data-rel="dialog" data-transition="flip">System</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Systems Development Life Cycle SDLC"><a href="#SystemsDevelopmentLifeCycle" data-rel="dialog" data-transition="flip">Systems Development Life Cycle</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Target Architecture"><a href="#TargetArchitecture" data-rel="dialog" data-transition="flip">Target Architecture</a></li>
+<li data-filtertext="EA3 Vertical Component"><a href="#VerticalComponent" data-rel="dialog" data-transition="flip">Vertical Component</a></li>
+<li data-filtertext="EA3 FEAF2:8 FEAF-II Vision Statement"><a href="#VisionStatement" data-rel="dialog" data-transition="flip">Vision Statement</a></li>
+<li data-filtertext="FEAF2:8 FEAF-II Web-enabled"><a href="#Webenabled" data-rel="dialog" data-transition="flip">Web-enabled</a></li>
 </ul>
 	</div><!-- /content -->	
-	<div data-role="footer" data-theme="d">
-		<h2>EA Fellows 2013</h2>
+	<div data-role="footer">
+		<h4>EA Glossary</h4>
 	</div><!-- /footer -->
 </div><!-- /page one -->
 
 <!-- Start of info page -->
 <div data-role="page" id="info" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>EA Glossary</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
-<h3>Created by</h3>
-<p>John Gøtze, <a href="http://eafellows.com">EA Fellows</a></p>
-<p>EA Glossary terms and definitions </p>
+<h2>EA Glossary</h2>
 <h3>Sources</h3>
 <p>
-<<<<<<< HEAD
 <a href="http://eapad.dk/ea3-cube/"><img src="http://eapad.dk/wp-content/uploads/2010/12/ea3logo.png" hspace="25" align="left" /></a>
 <a href="http://eapad.dk/ea3-cube/">EA3 Cube</a>
 <br />Terms and definitions from Scott Bernard's book <a href="http://eapad.dk/ea3-cube/book/">Introduction to Enterprise Architecture</a>, third edition published in 2012.</p>
-<p><a href="http://eapad.dk/gov/us/common-approach/"><img src="common.png" align="left" hspace="25" /></a>
+<p><a href="http://eapad.dk/gov/us/common-approach/"><img src="/common.png" align="left" hspace="25" /></a>
 <a href="http://eapad.dk/gov/us/common-approach/">The Common Approach to Federal Enterprise Architecture (FEAF-II)</a> (2012)<br />
 Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and publications.</p>
 <p><a href="http://www.iso-architecture.org/42010/">ISO 42010:2011</a> is an <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=50508">ISO standard</a>.</p>
 <h3>Contact</h3>
 <p>John Gøtze<br />john at gotze dot dk</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-inline="true" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
-=======
-<a href="http://eapad.dk/ea3-cube/"><img src="http://eapad.dk/wp-content/uploads/2010/12/ea3logo.png" width="30" hspace="25" align="left" /></a>
-<a href="http://eapad.dk/ea3-cube/">EA3 Cube</a>, Scott Bernard (2012) <a href="http://eapad.dk/ea3-cube/book/">Introduction to Enterprise Architecture</a>, third edition.</p>
-<p><a href="http://eapad.dk/gov/us/common-approach/"><img src="/common.png" align="left" width="30" hspace="25" /></a>
-<a href="http://eapad.dk/gov/us/common-approach/">The Common Approach to Federal Enterprise Architecture</a>, 2012 US Federal Enterprise Architecture Framework (FEAF-II).</p>
-<p><a href="http://www.iso-architecture.org/42010/"><img src="/isologo.png" width="30" hspace="25" align="left" /></a>
-<a href="http://www.iso-architecture.org/42010/">ISO 42010:2011</a>. <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=50508">ISO standard</a>.</p>
-<p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
->>>>>>> Markup/design work
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Actionable" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Actionable</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -172,11 +164,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>EA documentation and data that is useful to executives. managers. and support staff for resource planning and decision-making.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Agency" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Agency</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -184,11 +179,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Any executive department, military department, bureau, government corporation, government-controlled corporation, independent regulatory agency, or other organization in the Executive Branch of the United States Federal Government.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Alignment" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Alignment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -196,11 +194,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Conformance to a policy, standard, and/or goal.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ApplicationReferenceModel" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Application Reference Model (ARM)</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -208,11 +209,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>ARM version 1.0 is one of six reference models of the Federal Enterprise Architecture (FEA) version 2.0. It is a classification taxonomy used to describe the type of software applications in a particular architecture at the system, segment, agency, sector, federal, national, or international level. The ARM can help to identify opportunities for collaboration, shared services, and solution reuse in agency IT portfolios and inter-agency Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Architecting" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecting</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -221,11 +225,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Architecting takes place in the context of an organization ("person or a group of people and facilities with an arrangement of responsibilities, authorities and relationships") and/or a project ("endeavour with defined start and finish criteria undertaken to create a product or service in accordance with specified resources and requirements") [ISO/IEC 12207, ISO/IEC 15288].</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Architecture" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -235,11 +242,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p> &lang;system&rang; fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Architecturedescription" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecture description</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -247,11 +257,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Work product used to express an architecture.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="architecturesegment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecture Segment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -261,11 +274,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>means a part of the overall EA that documents one or more lines of business, including all levels and threads.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="architectureview">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecture View</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -273,11 +289,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Work product expressing the architecture of a system from the perspective of specific system concerns</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="architectureviewpoint">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Architecture Viewpoint</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -285,11 +304,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Work product establishing the conventions for the construction, interpretation and use of architecture views to frame specific system concerns.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Artifact">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Artifact</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -299,11 +321,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>A documentation product, such as a text document, diagram, spreadsheet, briefing slides, or video clip.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="BaselineArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Baseline Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -311,11 +336,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>is the set of products that portray the existing enterprise, the current business practices, and technical infrastructure. Commonly referred to as the “As-Is” architecture.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="BusinessCase">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Business Case</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -325,11 +353,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>means a collection of descriptive and analytic information about an investment in resource(s) and/or capabilities.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="BusinessReferenceModel">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Business Reference Model</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -337,11 +368,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>Business Reference Model (BRM) version 3.0 is one of six reference models of the Federal Enterprise Architecture (FEA) version 3.0. It is a classification taxonomy used to describe the type of business functions and service types in a particular solution architecture at the system, segment, agency, sector, federal, national, or international level. The taxonomy identifies business function and sub-function areas as well as related services that are performed within and between federal agencies and with external partners. The BRM can help to identify opportunities for collaboration, shared services, and solution reuse in agency IT portfolios and inter-agency Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="CapitalPlanning">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Capital Planning</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -350,11 +384,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <h2>FEAF-II: See <a href="#cpic">Capital Planning and Investment Control</a>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="cpic">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Capital Planning and Investment Control</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -363,11 +400,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 </p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ChangeManagement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Change Management</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -375,11 +415,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>The process of setting expectations and involving stakeholders in how a process or activity will be changed, so that the stakeholders have some control over the change and therefore may be more accepting of the change.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="CIOCouncil">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Chief Information Officers Council</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -388,11 +431,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
  documentation that is used by executives, managers, and staff to support resource planning, decision-making, and management.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Component">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Component</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -400,11 +446,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>EA components are those plug-and-play resources that provide capabilities at each level of the framework. Examples include strategic goals and measures; business services; information flows and data objects; information systems, web services, and software applications; voice/data/video networks, and associated cable plants.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Composite">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Composite</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -414,11 +463,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 <p>means an artifact that uses several documentation modeling techniques and/or represents several types of EA components.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Concern" data-theme="d">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Concern</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -427,11 +479,14 @@ Sources: E-Gov Act of 2002, OMB Circular A-11 and other OMB Circulars and public
 NOTE A concern pertains to any influence on a system in its environment including: developmental, technological, business, operational, organizational, political, economic, legal, regulatory, ecological and social influences.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top" data-theme="d">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ConfigurationManagement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Configuration Management</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -441,11 +496,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>the process of managing updates to business and technology resources (e.g., processes, systems, applications, and networks) to ensure that security controls are operating effectively and that standards are being followed.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="CrosscuttingComponent">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Crosscutting Component</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -453,11 +511,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>An EA component that serves several lines of business.  Examples include email systems that serve the whole enterprise, and financial systems that serve several lines of business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="CrosscuttingSegment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Crosscutting Segment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -465,11 +526,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>Serves several Lines of Business within or between agencies. Examples include email systems that serve the whole enterprise, and financial systems that serve several lines of business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Culture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Culture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -479,11 +543,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>means the beliefs, customs, values, structure, normative rules, and material traits of a social organization. Culture is evident in many aspects of how an organization functions.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="CurrentView">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Current View</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -493,11 +560,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>means a collection of artifacts that represent processes and technologies that currently exist in the enterprise.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Data">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Data</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -507,11 +577,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>Data refers to an elementary description of things, events, activities, and transactions that are recorded, classified, and stored, but not organized to convey any specific meaning. Data items can be numeric, alphabetic, figures, sounds, or images. A database consists of stored data items organized for retrieval.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="DataReferenceModel">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Data Reference Model</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -519,11 +592,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>Data Reference Model (DRM) version 2.0 is one of six reference models of the Federal Enterprise Architecture (FEA) version 2.0. It is a classification taxonomy used to describe the context for information exchanges and the type of data entities and attributes in a particular solution architecture at the system, segment, agency, sector, federal, national, or international level. The DRM can help to identify opportunities for collaboration, shared services, and solution reuse in agency IT portfolios and inter-agency Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ElectronicGovernment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Electronic Government</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -531,11 +607,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>means the use by the Federal Government of web-based Internet applications and other information technologies, combined with processes that implement these technologies, to (a) enhance the access to and delivery of Government information and services to the public, other agencies, and other Government entities, or (b) bring about improvements in Government operations that may include effectiveness, efficiency, service quality, or transformation.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Enterprise">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Enterprise</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -546,11 +625,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>means an area of common activity and goals within an organization or between several organizations, where information and other resources are exchanged.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="EnterpriseArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Enterprise Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -560,11 +642,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>means a strategic information asset base, which defines the mission; the information necessary to perform the mission, the technologies necessary to perform the mission, and the transitional processes for implementing new technologies in response to changing mission needs; and includes a baseline architecture, a target architecture, and a sequencing plan.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="EnterpriseRoadmap">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Enterprise Roadmap</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -572,11 +657,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 <p>refers to the document that is produced at least annually by the organization responsible for the enterprise (usually a Federal Agency) and which describes the current and future views of the enterprise-wide architecture, how changes occur, and how the EA program functions.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Environment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Environment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -585,11 +673,14 @@ NOTE A concern pertains to any influence on a system in its environment includin
 NOTE The environment of a system includes developmental, technological, business, operational, organizational, political, economic, legal, regulatory, ecological and social influences.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ExecutiveAgency">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Executive Agency</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -597,11 +688,14 @@ NOTE The environment of a system includes developmental, technological, business
 <p>has the meaning defined in section 4(1) of the Office of Federal Procurement Policy Act (41 U.S.C. 403(1)).</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ExecutiveSponsor">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Executive Sponsor</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -609,11 +703,14 @@ NOTE The environment of a system includes developmental, technological, business
 <p>The executive who has decision-making authority over the EA program and who provides resources and senior leadership for the program.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="FederalEnterpriseArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Federal Enterprise Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -621,11 +718,14 @@ NOTE The environment of a system includes developmental, technological, business
 <p>Federal Enterprise Architecture (FEA) is a business-based documentation and analysis framework for government-wide improvement. The FEA allows agencies to use standardized methods to describe the relationship between an agency’s strategic goals, business functions, and enabling technologies at various levels of scope and complexity. The FEA is comprised of a framework for documentation in six domain areas (strategic goals, business services, data and information, systems and applications, infrastructure, and security) and six reference models areas that are designed to facilitate standardized analysis, reporting, and the identification of duplicative investments, gaps, and opportunities for collaboration within and across federal agencies. The FEA method is based on a 5-step repeatable method for solution architecture that can be used at various levels of scope and provides current views, future views, and a transition (sequencing) plan.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="FederalITDashboard">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Federal IT Dashboard</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -633,11 +733,14 @@ NOTE The environment of a system includes developmental, technological, business
 <p>Federal IT Dashboard is a website enabling federal agencies, industry, the general public and other stakeholders to view details including performance for federal information technology investments.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Framework">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Framework</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -651,11 +754,14 @@ EXAMPLE 1 Generalised Enterprise Reference Architecture and Methodologies (GERAM
 EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746] is an architecture framework.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="FutureView">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Future View</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -665,11 +771,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>A collection of artifacts that represent processes and technologies that do not yet exist in the enterprise.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Governance">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Governance</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -677,11 +786,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>A group of policies, decision-making procedures, and management processes that work together to enable the effective planning and oversight of activities and resources.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="GovernmentInformation">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Government Information</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -689,11 +801,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means information created, collected, processed, disseminated, or disposed of by or for the Federal Government.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="GovernmentPublication">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Government Publication</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -701,11 +816,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means information which is published as an individual document at government expense, or as required by law. (44 U.S.C. 1901)</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="HorizontalComponent">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Horizontal Component</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -713,11 +831,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>A horizontal (or crosscutting) component is a changeable goal, process, program, or resource that serves several lines of business.  Examples include email and administrative support systems that serve the whole enterprise.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="HorizontalSegment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Horizontal Segment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -725,11 +846,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means a crosscutting process, program, or resource that serves several Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Information">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -739,11 +863,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means any communication or representation of knowledge such as facts, data, or opinions in any medium or form, including textual, numerical, graphic, cartographic, narrative, or audiovisual forms.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationLifeCycle">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Life Cycle</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -751,11 +878,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the stages through which information passes, typically characterized as creation or collection, processing, dissemination, use, storage, and disposition.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationManagement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Management</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -763,11 +893,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the planning, budgeting, manipulating, and controlling of information throughout its life cycle.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationResources">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Resources</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -775,11 +908,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>includes both government information and IT.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationResourcesManagement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Resources Management</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -787,11 +923,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the process of managing information resources to accomplish agency missions. The term encompasses both information itself and the related resources, such as personnel, equipment, funds, and IT.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationResourceManagementStrategicPlan">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Resource Management Strategic Plan</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -799,11 +938,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Information Resource Management Strategic Plan is strategic in nature and addresses all information resources management of the agency. Agencies must develop and maintain the agency’s IRM strategic plan as required by 44 U.S.C. 3506(b) (2). IRM strategic plans should conform to guidance provided annually in OMB Circular A–11, provide a description of how IT management activities help accomplish agency missions delivery area and program decision, and ensure decisions are integrated with management support areas including organizational planning, budget, procurement, financial management, and HR.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationSecurity">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Security</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -811,11 +953,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Information Security involves all functions necessary to meet federal Information Security policy requirements. It includes the development, implementation and maintenance of security policies, procedures and controls across the entire information lifecycle. This includes implementation and activities associated with NIST SP-800-37, Security Awareness training, SP-800-39 regarding the implementation of a Risk Management Framework and continuous monitoring, SP-800-53A security controls, and FISMA compliance reporting, development of security policy, and security audits and testing.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationSystem">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information System</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -823,11 +968,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Information System means a discrete set of IT, data, and related resources, such as personnel, hardware, software, and associated information technology services organized for the collection, processing, maintenance, use, sharing, dissemination or disposition of information in accordance with defined procedures, whether automated or manual.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationSystemLifeCycle">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information System Life Cycle</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -835,11 +983,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the phases through which an information system passes, typically characterized as initiation, development, operation, and termination.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationTechnology">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Technology</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">
@@ -849,11 +1000,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Information Technology (IT) means any equipment or interconnected system or subsystem of equipment that is used in the automatic acquisition, storage, manipulation, management, movement, control, display, switching, interchange, transmission or reception of data or information by an executive agency. IT is related to the terms Capital Asset, IT Investment, Program, Project, Sub-project, Service, and System.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InformationTechnologyInvestment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Information Technology Investment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -861,11 +1015,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the expenditure of IT resources to address mission delivery and management support. An IT investment may include a project or projects for the development, modernization, enhancement, or maintenance of a single IT asset or group of IT assets with related functionality and the subsequent operation of those assets in a production environment. While each asset or project would have a defined life-cycle, an investment that covers a collection of assets intended to support an ongoing business mission may not.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="InfrastructureReferenceModel">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Infrastructure Reference Model</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -873,11 +1030,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Infrastructure Reference Model (IRM) version 1.0 is one of six reference models of the Federal Enterprise Architecture (FEA) version 2.0. It is a classification taxonomy used to describe the type of voice, data, video, cloud, and mobile host environments in a particular solution architecture at the system, segment, agency, sector, federal, national, or international level. The IRM can help to identify opportunities for collaboration, shared services, and solution reuse in agency IT portfolios and inter-agency Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Interoperability">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Interoperability</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -885,11 +1045,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means the ability of different operating and software systems, applications, and services to communicate and exchange data in an accurate, effective, and consistent manner.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Knowledge">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Knowledge</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -897,11 +1060,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Knowledge consists of data or information that have been organized and processed to convey understanding, experience, accumulated learning, and expertise as they apply to a current problem or activity. Data that are processed to extract critical implications and to reflect past experience and expertise provide the recipient with organizational knowledge, which has a very high potential value.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="LineofBusiness">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Line of Business</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -911,11 +1077,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means a specific operating unit or shared service that exists within or between agencies. LOBs are also OMB-authorized service providers for the Federal Government, managed by designated executive agencies.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="MajorInvestment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Major Investment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -923,11 +1092,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>means a program requiring special management attention because of its importance to the mission or function of the agency, a component of the agency, or another organization; has significant program or policy implications; has high executive visibility; has high development, operating, or maintenance costs; is funded through other than direct appropriations; or is defined as major by the agency’s capital planning and investment control process. OMB may work with the agency to declare other investments as major investments. Agencies should consult with the respective OMB agency budget officer or analyst about what investments to consider as “major” and for those an OMB Circular A-11 Exhibit 300 annual submission is required. IT investments not considered “major” are categorized in the annual Exhibit 53 IT budget request submission as “non-major.”</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ManagingPartner">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Managing Partner</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -935,11 +1107,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Managing Partner represents the agency designated as the lead agency responsible for coordinating the implementation of the E-Gov or Line of Business (LoB) initiative. The managing partner is also responsible for coordinating and submitting the Exhibit 300 for the initiative and the Exhibit 300 will be represented as part of the managing partner’s budget portfolio. Please refer to the OMB MAX portal for additional information on managing partner reporting requirements for IT investments.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="MetaContext">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Meta Context</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -947,11 +1122,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Meta Context is the highest level context for understanding an idea, design, enterprise.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Methodology">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Methodology</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -961,11 +1139,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Methodology (sometimes called “approach”) refers to the repeatable process by which architecture documentation will be developed, archived, and used; including the selection of principles, a framework, modeling tools, artifacts, repository, reporting, and auditing.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="MissionStatement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Mission Statement</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -973,11 +1154,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 <p>Mission Statement is a succinct description of why the enterprise exists.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Modelkind">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Model Kind</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -986,14 +1170,14 @@ EXAMPLE 2 Reference Model of Open Distributed Processing (RM-ODP) [ISO/IEC 10746
 NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri nets, balance sheets, organization charts and state transition models.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
-
-
-
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="NewITInvestment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>New IT Investment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1001,12 +1185,15 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an IT investment and its associated projects newly proposed by the agency that has not been previously funded by OMB. This does not include investments existing within the agency that have not previously been reported to OMB.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
  
 
 <!-- Start of term page -->
 <div data-role="page" id="NationalSecuritySystem">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>National Security System</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1014,11 +1201,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means any telecommunications or information system operated by the United States Government, the function, operation, or use of which (1) involves intelligence activities; (2) involves cryptologic activities related to national security; (3) involves command and control of military forces; (4) involves equipment that is an integral part of a weapon or weapons system; or (5) is critical to the direct fulfillment of military or intelligence missions, but excluding any system that is to be administrative and business applications (including payroll, finance, logistics, and personnel management applications).</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="NonMajorInvestment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Non-Major Investment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1026,11 +1216,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an IT investment not meeting the definition of major as defined above but is part of the agency’s IT Portfolio. All non-major investments are reported on the Exhibit 53.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="OnGoingInvestment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>On-Going Investment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1038,11 +1231,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an investment and its associated assets, including both maintenance projects and operations that have been through a complete budget cycle with OMB with respect to the President’s Budget for the current year.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Operations">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Operations</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1050,11 +1246,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>mean the day-to-day management of an asset in the production environment and include activities to operate data centers, help desks, data centers, telecommunication centers, and end user support services. Operational activities for major IT investments are reported through Section C of the Exhibit 300B. Operational costs include the expenses associated with an IT asset that is in the production environment to sustain an IT asset at the current capability and performance levels including Federal and contracted labor costs; and costs for the disposal of an asset.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page --> 
 
 <!-- Start of term page -->
 <div data-role="page" id="OperationsandMaintenance">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Operations and Maintenance</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1062,11 +1261,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Operations and Maintenance (O&M) means the phase of an asset in which the asset is in operations and produces the same product or provides a repetitive service. O&M is the same as “steady state.”</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="PartnerAgency">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Partner Agency</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1074,11 +1276,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>represents the agency for an E-Gov or LOB initiative designated as an agency that should provide resources (e.g., funding, FTEs, in-kind) to the management, development, deployment, or maintenance of a common solution. The partner agency is also responsible for including the appropriate line items in its Exhibit 53 reflecting the amount of the contribution for each of the E-Gov or LOB initiatives to which it is providing resources.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="PerformanceGap">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Performance Gap</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1086,11 +1291,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Performance Gap is an identified activity or capability that is lacking within the enterprise, which causes the enterprise to perform below desired levels or not achieve strategic or tactical goals.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="PerformanceReferenceModel">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Performance Reference Model</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1098,11 +1306,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Performance Reference Model (PRM) ) supports architectural analysis and reporting in the strategy sub-architecture view of the overall EA. The PRM allows agencies to better manage the business of government at a strategic level, by providing a means for using the EA to measure the success of investments and their impact on strategic outcomes. The PRM shows the linkage between internal business components and the achievement of business and customer-centric outputs and outcomes. This line of sight is articulated through the PRM’s hierarchical taxonomy and the use of “Measurement Area”, “Category”, “Grouping”, and “Indicator” information areas.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Primitive">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Primitive</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1112,11 +1323,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an artifact that uses one modeling technique to describe one type of EA component.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="PrivacyImpactAssessment">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Privacy Impact Assessment</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1124,11 +1338,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Privacy Impact Assessment (PIA) is a process for examining the risks and ramifications of using information technology to collect, maintain and disseminate information in identifiable form from or about members of the public, and for identifying and evaluating protections and alternative processes to mitigate the impact to privacy of collecting such information. Consistent with OMB M–03–22, implementing the privacy provisions of the E-Government Act, agencies must conduct and make publicly available PIAs for all new or significantly altered IT investments administering information in identifiable form collected from or about members of the public.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Program">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Program</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1139,11 +1356,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an ongoing set of activities and projects managed in a coordinated way.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Project">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Project</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1153,11 +1373,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means a temporary activity to create a unique product, service, or result.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="QualityAssurance">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Quality Assurance</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1165,11 +1388,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Quality Assurance is the systematic monitoring and evaluation of the various aspects of a project, service or facility to maximize the probability that standards of quality are being attained by the production process.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Records">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Records</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1177,11 +1403,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Records includes all books, papers, maps, photographs, machine readable materials, or other documentary materials, regardless of physical form or characteristics, made or received by an agency of the United States Government under Federal law or in connection with the transaction of public business and preserved or appropriate for preservation by that agency or its legitimate successor as evidence of the organization, functions, policies, decisions, procedures, operations, or other activities of the Government or because of the informational value of data in them. Library and museum material made or acquired and preserved solely for reference or exhibition purposes, extra copies of documents preserved only for convenience of reference and stocks of publications and of processed documents are not included.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="RecordsManagement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Records Management</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1189,11 +1418,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means the planning, controlling, directing, organizing, training, promoting, and other managerial activities involved with respect to records creation, records maintenance and use, and records disposition in order to achieve adequate and proper documentation of the policies and transactions of the Federal Government and effective and economical management of agency operations. (44 U.S.C. 2901(2))</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ReferenceArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Reference Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1201,11 +1433,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Reference Architecture is an authoritative source of information about a specific subject area that guides and constrains the instantiations of multiple architectures and solutions.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="SecurityReferenceModel">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Security Reference Model</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1213,11 +1448,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Security Reference Model (SRM) version 1.0 is one of six reference models of the Federal Enterprise Architecture (FEA) version 2.0. It is a classification taxonomy used to describe the type of security controls in a particular architecture at the system, segment, agency, sector, federal, national, or international level. The SRM can help to identify opportunities for collaboration, shared services, and solution reuse in agency IT portfolios and inter-agency Lines of Business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="SegmentArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Segment Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1225,11 +1463,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Segment Architecture is a detailed, results-oriented architecture (baseline and target) and a transition strategy for a portion or segment of the enterprise. Segments are individual elements of the enterprise describing core mission areas and common or shared business services and enterprise services. They provide the core linkage of the IT Investment Portfolio to the Agency’s performance management system. As such, segments are designed to be common across programs that support the same mission area. Increasingly, shared segments will be common across the government and agencies should plan to use approved government-wide shared segments as their target architecture.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ServiceConsumer">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Service Consumer</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1237,11 +1478,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means an agency or business unit that receives business or technology service(s) from a Line of Business provider. A service consumer may be either internal or external to the organization responsible for providing services.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ServiceOrientedArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Service Oriented Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1249,11 +1493,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <pService Oriented Architecture (SOA) is a set of principles and methodologies for designing and developing software in the form of interoperable services</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="ServiceProvider">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Service Provider</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1261,11 +1508,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Service Provider means an agency or business unit that provides business or technology service(s) as a Line of Business consumer(s). This includes a discrete set of personnel, IT, and support equipment with the primary function of providing service(s) to more one or more other agencies or business units on a reimbursable basis.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="SharedService">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Shared Service</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1273,11 +1523,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Shared Service means a mission or support function provided by one business unit to other business units within or between organizations.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="SolutionArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Solution Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1285,11 +1538,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Solution Architecture is a standardized method of identifying business requirements and viable technology solutions within the context of a single agency’s enterprise architecture or a multi-agency sector or government-wide/international architecture. Solution architecture includes current and future views as well as transition plans at a number of levels of scope including applications, systems, segments, enterprise, sector, government-wide, national, and international. The Federal Solution Architecture Methodology (FSAM) is the repeatable process for doing solution architecture through projects at various levels of scope in the federal sector.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Stakeholder">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Stakeholder</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1299,11 +1555,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>&lang;system&rang; Individual, team, organization, or classes thereof, having an interest in a system.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="System">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>System</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1314,11 +1573,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>means a tangible IT asset that is comprised of hardware devices, software applications, databases, users, processes, and security controls.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="SystemsDevelopmentLifeCycle">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Systems Development Life Cycle</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1326,11 +1588,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Systems Development Life Cycle (SDLC) is guidance, policies, and procedures, for developing systems throughout their life cycle, including requirements, design, implementation testing, deployment, operations, and maintenance.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="TargetArchitecture">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Target Architecture</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1338,11 +1603,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Target Architecture is the representation of a desired future state or “to be built” for the enterprise within the context of the strategic direction.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="VerticalComponent">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Vertical Component</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1350,11 +1618,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>An EA component that is contained within one line of business.  Examples include a system, application, database, network, or website that serves one line of business.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="VisionStatement">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Vision Statement</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1362,11 +1633,14 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>is the part of a strategic plan that succinctly describes the competitive strategy of the enterprise.</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of term page -->
 <div data-role="page" id="Webenabled">
-<div data-role="header" data-theme="d">
+<div data-role="header" data-theme="a">
 <h1>Web-enabled</h1>
 </div><!-- /header -->
 <div data-role="content" data-theme="d">	
@@ -1374,12 +1648,15 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 <p>Web-enabled means applications and services that are accessed through a web browser and function through an internal and/or external Internet-protocol based collaboration environment (e.g., Internet, local area network, wide area network, public cloud, private cloud, and hybrid cloud).</p>
 <p><a href="#one" data-direction="reverse" data-role="button" data-icon="home" data-iconpos="top">Home</a></p>	
 </div><!-- /content -->
+<div data-role="footer">
+<h4>EA Glossary</h4>
+</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of third page: #popup -->
 <div data-role="page" id="popup">
 
-	<div data-role="header" data-theme="d" data-theme="e">
+	<div data-role="header" data-theme="a" data-theme="e">
 		<h1>Dialog</h1>
 	</div><!-- /header -->
 
@@ -1389,9 +1666,9 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
 	</div><!-- /content -->
 	
-	
+	<div data-role="footer">
 		<h4>Page Footer</h4>
-	
+	</div><!-- /footer -->
 </div><!-- /page popup -->
 <script type="text/javascript">
 

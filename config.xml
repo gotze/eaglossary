@@ -6,7 +6,7 @@
     <name>EA Glossary</name>
 
     <description>
-        Glossary of enterprise architecture terms and concepts. Sources are EA3, FEAF-II and ISO42010.
+        Glossary of enterprise architecture terms and concepts. Sources are EA3, FEAF-II, TOGAF and ISO42010.
     </description>
 
     <author href="http://eafellows.com" email="john@gotzespace.dk">
@@ -19,6 +19,7 @@
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
+	<preference name="splash-screen-duration" value="100"/>
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />

@@ -36,6 +36,4 @@
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
     <gap:splash src="splash.png" />
-<application android:theme="@style/NoActionBar">
-	
 </widget>

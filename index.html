@@ -183,10 +183,17 @@
 <li data-filtertext="FEAF2:8 FEAF-II Web-enabled"><a href="#Webenabled">Web-enabled</a></li>
 <li data-filtertext="TOGAF Work Package"><a href="#WorkPackage" data-theme="d">Work Package</a></li>
 </ul>
-	</div><!-- /content -->	
-	<div data-role="footer" data-theme="d">
-		<h2>EA Fellows 2013</h2>
+	</div><!-- /content -->
+		
+	<div data-role="footer" data-id="foo1" data-position="fixed" data-theme="d">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#info">Info</a></li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</div><!-- /navbar -->
 	</div><!-- /footer -->
+
 </div><!-- /page one -->
 
 <!-- Start of info page -->
@@ -2201,10 +2208,7 @@ NOTE Examples of model kinds include: data flow diagrams, class diagrams, Petri 
 		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>		
 		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>	
 	</div><!-- /content -->
-	
-	
 		<h4>Page Footer</h4>
-	
 </div><!-- /page popup -->
 </body>
 </html>

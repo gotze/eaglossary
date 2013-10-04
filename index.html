@@ -17,7 +17,8 @@
 	<script src="phonegap.js"></script>
 
     <script type="text/javascript" charset="utf-8">
-
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.hide();
     // Wait for device API libraries to load
     //
     function onLoad() {
@@ -34,8 +35,7 @@
     // Handle the menu button
     //
     function onMenuKeyDown() {
-		ActionBar actionBar = getSupportActionBar();
-		actionBar.hide();
+	
 		    }
 
     </script>
